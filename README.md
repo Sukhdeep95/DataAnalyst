@@ -1,58 +1,48 @@
-# 🛒 Inventory Demand Forecasting
+# Breast Cancer Prediction using Logistic Regression
 
-This project aims to predict future product demand using historical sales data. It uses time-series and contextual features to train a machine learning model that helps optimize inventory planning for retail stores.
+This project aims to predict whether a tumor is malignant or benign using the Breast Cancer Wisconsin (Diagnostic) Dataset. The prediction is based on features computed from digitized images of a fine needle aspirate (FNA) of a breast mass.
 
----
+## 📁 Dataset
 
-## 📊 Dataset
+The dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data) and includes the following:
 
-The dataset contains daily sales data for multiple stores and items over several years.
+- **ID**: Unique identifier for each patient record.
+- **Diagnosis**: 'M' = Malignant, 'B' = Benign (target variable).
+- **30 features**: Mean, standard error, and "worst" (largest) values for various measurements like:
+  - Radius
+  - Texture
+  - Perimeter
+  - Area
+  - Smoothness
+  - Compactness
+  - Concavity
+  - Symmetry
+  - Fractal dimension
 
-### Sample Columns:
-- `date`: Date of the transaction
-- `store`: Store ID
-- `item`: Item ID
-- `sales`: Number of items sold
-- `year`, `month`, `day`: Extracted from the `date`
-- `weekend`: Indicates if the day was a weekend
-- `holidays`: Binary flag for holidays
-- `m1`, `m2`: Additional engineered features (moving averages, etc.)
+## 🔍 Objective
 
----
+To build a **logistic regression model** that accurately classifies breast tumors as benign or malignant based on the input features.
 
-## 📌 Objectives
 
-- Forecast daily sales for each item at each store
-- Identify trends and patterns in sales
-- Evaluate performance of various time-series forecasting techniques
+## 🛠️ Technologies Used
 
----
-
-## 🧠 Machine Learning Models Used
-
-- Linear Regression
-- Random Forest Regressor
-- XGBoost
-- ARIMA / SARIMA (if applicable)
-- LSTM (if using deep learning)
-
----
-
-## 🔧 Technologies
-
-- Python
-- Pandas & NumPy
-- Matplotlib & Seaborn
-- Scikit-learn
-- XGBoost / LightGBM
+- Python 3.x
+- Pandas
+- NumPy
+- Matplotlib / Seaborn (for visualization)
+- Scikit-learn (for model building and evaluation)
 - Jupyter Notebook
 
----
+## 📈 Model
+
+The model used is **Logistic Regression**:
+- Trained on standardized input features.
+- Evaluated using accuracy, confusion matrix, precision, recall, and F1-score.
+
+## ✅ Results
+
+- The logistic regression model achieved high accuracy on the test set.
+- The dataset is well-balanced and suitable for binary classification.
 
 
 
-## 🚀 How to Run
-
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/Sukhdeep95/DataAnalyst.git
